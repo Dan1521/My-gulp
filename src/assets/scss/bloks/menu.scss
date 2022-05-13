@@ -1,0 +1,14 @@
+.menu {
+  &__list{
+    display: flex;
+  }
+  &__item {
+    &:not(:last-child){
+      margin-right: 10px;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: var(--color-primery);
+  }
+}

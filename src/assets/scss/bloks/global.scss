@@ -1,0 +1,100 @@
+
+.title-1{
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+  @media (max-width: 1025px) {
+    font-size: 42px;
+    line-height: 56px;
+  }
+  @media (max-width: 768px) {
+    font-size: 36px;
+    line-height: 48px;
+  }
+  @media (max-width: 576px) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  @media (max-width: 425px) {
+    font-size: 24px;
+    line-height: 33px;
+  }
+}
+.title-2{
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 48px;
+  @media (max-width: 1025px) {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  @media (max-width: 768px) {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  @media (max-width: 576px) {
+    font-size: 24px;
+    line-height: 34px;
+  }  
+}
+.title-3{
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+  @media (max-width: 768px) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  @media (max-width: 576px) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+.title-4{
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 32px;
+  @media (max-width: 768px) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  @media (max-width: 576px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.title-5{
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+}
+.btn{
+  font-family: inherit;
+  display: inline-block;
+  font-weight: 700;
+  padding: 16px 24px;
+}
+
+.section{
+ 
+}
+
+
+.text-accent{
+  color: var(--color-accent);
+}
+.text-black{
+  color: var(--color-black);
+}
+.text-gray{
+  color: var(--color-grayish);
+}
+.text-center{
+  text-align: center;
+}
+
+
+
+
+
+

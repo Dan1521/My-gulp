@@ -1,0 +1,60 @@
+
+
+.burger {
+  position: relative;
+  z-index: 20;
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 29px;
+  height: 32px;
+  padding: 7px 0;
+
+  &__line {
+    transition: all 0.2s ease-in;
+    &:nth-child(1) {
+      width: 20px;
+      height: 2px;
+      background-color: var(--color-accent);
+    }
+
+    &:nth-child(2) {
+      width: 10px;
+      height: 2px;
+      background-color: var(--color-grayish);
+    }
+
+    &:nth-child(3) {
+      width: 20px;
+      height: 2px;
+      background-color: var(--color-grayish);
+    }
+  }
+  @include md-dowm {
+    display: flex;
+  }
+
+}
+.burger.active {
+  .burger__line {
+    transform-origin: right;
+    &:nth-child(1) {
+      width: 23px;
+      height: 2px;
+      background-color: var(--color-accent);
+      transform: rotate(-45deg);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:nth-child(3) {
+      width: 23px;
+      height: 2px;
+      background-color: var(--color-accent);
+      transform: rotate(45deg);
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import "components/vars";
+@import "mixin/breakpoints";
+@import "mixin/grid";
+
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+.wrapper{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.main{
+  flex: 1 1 100%;
+  min-height: 100%;
+}
+.container{
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1196px;
+  padding: 0 20px;
+}
+
+body{
+  font-weight: 500;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--color-black);
+  &.no-scroll{
+    overflow: hidden;
+  }
+}
+
+
+@import "bloks/global.scss";
+@import "bloks/sprite.scss";
+@import "bloks/header.scss";
+@import "bloks/nav.scss";
+@import "bloks/footer.scss";
+
+
+
