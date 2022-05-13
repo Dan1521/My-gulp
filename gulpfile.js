@@ -50,10 +50,12 @@ const path = {
     clean: "./" + distPath
 }
 
-function serve() {
+function server() {
     browserSync.init({
         server: {
-            baseDir: "./" + distPath
+            baseDir: "./" + distPath,
+            notify: false,
+            online: false,
         }
     });
 }
@@ -184,7 +186,7 @@ function watchFiles() {
 }
 
 const build = gulp.series(clean, gulp.parallel(css, html, images, svgOptimiz, fonts, js, svgSprite));
-const watch = gulp.parallel(serve, watchFiles, build);
+const watch = gulp.parallel(server, watchFiles, build);
 
 exports.html = html;
 exports.clean = clean;
