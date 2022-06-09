@@ -1,7 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-	
-	// const burger = document.querySelector('.burger');
+	const burger = document.querySelector('.burger');
 	// const menu = document.querySelector('.menu');
 	// const form = document.querySelector('.form');
 	// const telSelector = document.querySelector('.form-contacts__input-tel');

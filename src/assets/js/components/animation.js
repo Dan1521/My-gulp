@@ -1,3 +1,6 @@
+
+
+
 function scrollAnim() {
   if (animItems.length > 0) {
     animItems.forEach((element) => {

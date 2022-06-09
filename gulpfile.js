@@ -4,6 +4,7 @@ const {src, dest} = require("gulp"),
     prefixe = require("gulp-autoprefixer"),
     cssnano = require("gulp-clean-css"),
     del = require("del"),
+    concat = require("gulp-concat"),
     uglify = require("gulp-uglify"),
     imagemin = require("gulp-imagemin"),
     fileinclude = require("gulp-file-include"),
@@ -15,7 +16,7 @@ const {src, dest} = require("gulp"),
     sprite = require("gulp-svg-sprite"),
     fonter = require("gulp-fonter"),
     webp = require("gulp-webp"),
-    browserSync = require("browser-sync").create(); 
+    browserSync = require("browser-sync").create();
 
 
 
@@ -91,11 +92,11 @@ function css(cd){
         grid: true,
     }))
     .pipe(group_media())
-    .pipe(cssnano())
-    .pipe(rename({
-        suffix: ".min",
-        extname: ".css"
-    }))
+    // .pipe(cssnano())
+    // .pipe(rename({
+    //     suffix: ".min",
+    //     extname: ".css"
+    // }))
     .pipe(dest(path.build.css))
     .pipe(browserSync.reload({stream: true}));
 
@@ -108,10 +109,10 @@ function js(cd){
       srcPath + "assets/js/*.js",
       srcPath + "assets/js/libs/*.js",
     ])
-      .pipe(uglify())
-      .pipe(rename({
-          suffix: ".min",
-      }))
+      // .pipe(uglify())
+      // .pipe(rename({
+      //     suffix: ".min",
+      // }))
       .pipe(dest(path.build.js))
       .pipe(browserSync.reload({stream: true}));
   cd();
@@ -123,7 +124,7 @@ function images(cd){
         'src/assets/images/**/*.jpg',
         'src/assets/images/**/*.webp',
     ])
-        .pipe(webp())  
+        .pipe(webp())
         .pipe(dest(path.build.images))
         .pipe(browserSync.reload({stream: true}));
     cd()
@@ -159,7 +160,7 @@ function svgSprite(cd){
         }))
         .pipe(replace('&gt;', '>'))
         .pipe(sprite({
-            mode: {   
+            mode: {
                 symbol:{
                     sprite: "../sprite.svg"
                 }
@@ -175,7 +176,7 @@ function clean(cb) {
     cb();
 }
 
-function watchFiles() {  
+function watchFiles() {
     gulp.watch([path.watch.css], css);
     gulp.watch([path.watch.html], html);
     gulp.watch([path.watch.images], images);

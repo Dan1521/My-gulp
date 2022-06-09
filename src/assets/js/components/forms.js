@@ -1,12 +1,16 @@
-if (telSelector) {
-  let masked = new Inputmask("+7 (999) 999-99-99");
-  masked.mask(telSelector);
-}
+
+function(){
+
+  const telSelector= document.querySelector('telSelector')
+  if (telSelector) {
+    let masked = new Inputmask("+7 (999) 999-99-99");
+    masked.mask(telSelector);
+  }
 
 if (form) {
-  const validation = new JustValidate('.form-contacts');
+  const validation = new JustValidate('.form');
   validation
-    .addField('.form-contacts__input-name', [
+    .addField('.form-field-name', [
       {
         rule: 'required',
         value: true,
@@ -20,7 +24,7 @@ if (form) {
         value: 30,
       },
     ])
-    .addField('.form-contacts__input-email', [
+    .addField('.form-field-email', [
       {
         rule: 'required',
       },
@@ -28,7 +32,7 @@ if (form) {
         rule: 'email',
       },
     ])
-    .addField('.form-contacts__input-tel', [
+    .addField('.form-field-tel', [
       {
         rule: 'required',
       },
@@ -39,25 +43,8 @@ if (form) {
           return phone.length === 10
         },
       },
-    ])
-    .addField('.form-contacts__input-text', [
-      {
-        rule: 'required',
-      },
-      {
-        rule: 'minLength',
-        value: 3,
-      },
-      {
-        rule: 'maxLength',
-        value: 100,
-      },
-    ])
-    .addField('.form-contacts__argeem-input', [
-      {
-        rule: 'required',
-      },
     ]).onSuccess((event) => {
       console.log('sent')
     })
+}
 }
